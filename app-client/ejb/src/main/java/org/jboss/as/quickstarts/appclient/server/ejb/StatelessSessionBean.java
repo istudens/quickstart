@@ -20,6 +20,7 @@ import javax.ejb.SessionContext;
 import javax.annotation.Resource;
 import javax.ejb.Stateless;
 
+import org.jboss.as.quickstarts.appclient.server.api.StatelessSession;
 import org.jboss.logging.Logger;
 
 /**

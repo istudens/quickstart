@@ -44,10 +44,34 @@
         </license>
     </licenses>
 
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>app-client-api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>app-client-ejb</artifactId>
+                <version>${project.version}</version>
+                <type>ejb</type>
+            </dependency>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>app-client-simple-client</artifactId>
+                <version>${project.version}</version>
+                <type>app-client</type>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
     <modules>
-        <module>ejb</module>
-        <module>client-simple</module>
+        <module>api</module>
         <module>ear</module>
+        <module>ejb</module>
+        <module>simple-client</module>
+        <module>deployment</module>
     </modules>
 
     <build>

@@ -24,11 +24,11 @@
         <artifactId>app-client</artifactId>
         <version>22.0.0.Beta1-SNAPSHOT</version>
     </parent>
-    <artifactId>app-client-client-simple</artifactId>
+    <artifactId>app-client-simple-client</artifactId>
     <packaging>jar</packaging>
-    <name>Quickstart: app-client - client-simple</name>
+    <name>Quickstart: app-client - simple-client</name>
     <description>This project demonstrates how to package and use an EE application client; this is the client POM file</description>
-    
+
     <licenses>
         <license>
             <name>Apache License, Version 2.0</name>
@@ -52,8 +52,7 @@
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>app-client-ejb</artifactId>
-            <version>${project.version}</version>
+            <artifactId>app-client-api</artifactId>
         </dependency>
     </dependencies>
 

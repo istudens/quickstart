@@ -20,7 +20,7 @@ import java.util.Arrays;
 
 import javax.ejb.EJB;
 
-import org.jboss.as.quickstarts.appclient.server.ejb.StatelessSession;
+import org.jboss.as.quickstarts.appclient.server.api.StatelessSession;
 import org.jboss.logging.Logger;
 
 /**
