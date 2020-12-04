@@ -38,8 +38,8 @@ public class Main {
      * static fields within the main class of the application</b><br/>
      * See JSR 342 (EE7 platform spec) chapter 5.2.5 .
      */
-    @EJB
-    private static StatelessSession slsb;
+//    @EJB
+//    private static StatelessSession slsb;
 
     /** no instance necessary */
     private Main() {
@@ -54,9 +54,12 @@ public class Main {
         if (args.length > 0)
             LOG.info("            " + Arrays.asList(args));
 
+
         // add an client side interceptor to provide the client machine name to the server application
         //EJBClientContext.getCurrent().registerInterceptor(0, new ClientInterceptor());
-        LOG.info(slsb.getGreeting());
-        slsb.invokeWithClientContext();
+        AppClientTest test = new AppClientTest();
+        LOG.info(test.getGreeting());
+//        LOG.info(slsb.getGreeting());
+//        slsb.invokeWithClientContext();
     }
 }

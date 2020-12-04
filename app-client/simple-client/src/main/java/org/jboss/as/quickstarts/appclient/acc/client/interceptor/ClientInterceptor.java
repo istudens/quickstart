@@ -33,7 +33,8 @@ public class ClientInterceptor implements EJBClientInterceptor {
     @Override
     public void handleInvocation(EJBClientInvocationContext context) throws Exception {
         String nodeName = System.getProperty("jboss.node.name");
-        LOGGER.info("Adding jboss.node.name (" + nodeName + ") to the invocation context");
+        LOGGER.info("TADY: Adding jboss.node.name (" + nodeName + ") to the invocation context");
+        System.out.println("TADY: Adding jboss.node.name (" + nodeName + ") to the invocation context");
         context.getContextData().put("Client ", nodeName);
         context.sendRequest();
     }
